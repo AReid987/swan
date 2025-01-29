@@ -16,15 +16,18 @@ import RateLimits from '@site/src/components/RateLimits';
 
 <Tabs groupId="interface">
   <TabItem value="cli" label="Goose CLI" default>
-    Run the following command to install the latest version of Goose: 
+    Run the following command to install the latest version of Goose:
 
     ```sh
     curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.sh | bash
     ```
     This script will fetch the latest version of Goose and set it up on your system.
-    
+
     :::tip Best Practice
     It’s best to keep Goose updated. You can update it by re-running the installation script.
+    :::
+    :::tip Automation
+    You can disable automatic interactive configuration by adding `| CONFIGURE=false bash` to the script above.
     :::
   </TabItem>
   <TabItem value="ui" label="Goose Desktop">
@@ -38,13 +41,13 @@ import RateLimits from '@site/src/components/RateLimits';
         download goose desktop
       </Link>
     </div>
-    <div style={{ marginTop: '1rem' }}>  
+    <div style={{ marginTop: '1rem' }}>
       1. Unzip the downloaded `Goose.zip` file.
       2. Run the executable file to launch the Goose desktop application.
       :::tip Best Practice
       It’s best to keep Goose updated. You can do this by checking the [Goose GitHub Release page](https://github.com/block/goose/releases/stable) and downloading updates when available.
       :::
-    </div>  
+    </div>
   </TabItem>
 </Tabs>
 
@@ -66,7 +69,7 @@ Goose works with a set of [supported LLM providers][providers], and you’ll nee
     │
     ◇ Provider openai requires OPENAI_API_KEY, please enter a value
     │▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪
-    │    
+    │
     ◇ Enter a model from that provider:
     │ gpt-4o
     │
@@ -87,13 +90,13 @@ Goose works with a set of [supported LLM providers][providers], and you’ll nee
 ### Update a Provider
 <Tabs groupId="interface">
   <TabItem value="cli" label="Goose CLI" default>
-    **To update your LLM provider and API key:** 
-    1. Run the following command: 
+    **To update your LLM provider and API key:**
+    1. Run the following command:
     ```sh
     goose configure
     ```
     2. Select `Configure Providers` from the menu.
-    3. Follow the prompts to choose your LLM provider and enter or update your API key. 
+    3. Follow the prompts to choose your LLM provider and enter or update your API key.
 
     **Example:**
 
@@ -110,7 +113,7 @@ Goose works with a set of [supported LLM providers][providers], and you’ll nee
     │
     ◇ Provider Google Gemini requires GOOGLE_API_KEY, please enter a value
     │▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪
-    │    
+    │
     ◇ Enter a model from that provider:
     │ gemini-2.0-flash-exp
     │
@@ -120,7 +123,7 @@ Goose works with a set of [supported LLM providers][providers], and you’ll nee
     ```
   </TabItem>
   <TabItem value="ui" label="Goose Desktop">
-  **To update your LLM provider and API key:** 
+  **To update your LLM provider and API key:**
 
     1. Click on the three dots in the top-right corner.
     2. Select `Provider Settings` from the menu.
@@ -138,13 +141,13 @@ Goose works with a set of [supported LLM providers][providers], and you’ll nee
     <TabItem value="cli" label="Goose CLI" default>
         From your terminal, navigate to the directory you'd like to start from and run:
         ```sh
-        goose session 
+        goose session
         ```
     </TabItem>
     <TabItem value="ui" label="Goose Desktop">
         Starting a session in the Goose Desktop is straightforward. After choosing your provider, you’ll see the session interface ready for use.
-        
-        Type your questions, tasks, or instructions directly into the input field, and Goose will get to work immediately. 
+
+        Type your questions, tasks, or instructions directly into the input field, and Goose will get to work immediately.
     </TabItem>
 </Tabs>
 
